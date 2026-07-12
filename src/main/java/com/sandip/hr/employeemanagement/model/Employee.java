@@ -1,6 +1,6 @@
 package com.sandip.hr.employeemanagement.model;
 
-import com.sandip.hr.employeemanagement.Department;
+import com.sandip.hr.employeemanagement.enums.Department;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.time.LocalDate;

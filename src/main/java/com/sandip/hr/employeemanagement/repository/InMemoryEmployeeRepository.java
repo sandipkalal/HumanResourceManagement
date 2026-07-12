@@ -40,7 +40,7 @@ public class InMemoryEmployeeRepository implements EmployeeRepository{
     }
 
     @Override
-    public boolean deletedBy(Long id) {
+    public boolean deletedById(Long id) {
         if(inMemoryEmployee.containsKey(id)){
             inMemoryEmployee.remove((long)id);
             return true;

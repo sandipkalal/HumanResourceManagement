@@ -11,7 +11,7 @@ public interface EmployeeRepository {
     Optional<Employee> findById(Long id);
     List<Employee> findAll();
     Employee update(Employee employee);
-    boolean deletedBy (Long id);
+    boolean deletedById (Long id);
     boolean existsById(Long id);
     boolean existsByEmail(String email);
 }

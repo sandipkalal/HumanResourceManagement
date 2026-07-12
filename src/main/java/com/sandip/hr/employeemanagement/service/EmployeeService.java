@@ -6,9 +6,16 @@ import com.sandip.hr.employeemanagement.dto.EmployeeResponseDTO;
 import java.util.List;
 
 public interface EmployeeService {
-    EmployeeResponseDTO createEmployee(EmployeeRequestDTO empRequestDTO);
-    EmployeeResponseDTO getEmployeeById(Long id );
+    EmployeeResponseDTO createEmployee(EmployeeRequestDTO requestDTO);
+
+    EmployeeResponseDTO getEmployeeById(Long id);
+
     List<EmployeeResponseDTO> getAllEmployees();
-    EmployeeResponseDTO updateEmployee(Long id, EmployeeRequestDTO empRequestDTO);
+
+    EmployeeResponseDTO updateEmployee(
+            Long id,
+            EmployeeRequestDTO requestDTO
+    );
+
     void deleteEmployee(Long id);
 }
