@@ -13,10 +13,10 @@ public class EmployeeRequestDTO {
     @NotBlank(message = "Required")
     @Email(message = "Required valid email")
     public String email;
-    @NotBlank(message = "Required")
+    @NotNull(message = "Should not be null")
     public Department department;
-    @NotBlank(message = "Required")
-    @Positive(message = "Should be positive value")
+    @NotNull(message = "Salary must not be null")
+    @Positive(message = "Salary must be greater than zero")
     public double salary;
     @FutureOrPresent(message ="should be current or future date")
     public LocalDate dateOfJoining;

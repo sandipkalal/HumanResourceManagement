@@ -93,12 +93,13 @@ public class GlobalExceptionHandler {
             HttpServletRequest request
     ) {
 
+        exception.printStackTrace();
+
         ErrorResponse errorResponse = new ErrorResponse(
                 LocalDateTime.now(),
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                HttpStatus.INTERNAL_SERVER_ERROR
-                        .getReasonPhrase(),
-                "An unexpected error occurred",
+                HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),
+                exception.getMessage(),
                 request.getRequestURI(),
                 null
         );
